@@ -101,6 +101,11 @@ Widget _buildTextFormField(_controller, String labelText) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: TextFormField(
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Enter validate input';
+        }
+      },
       controller: _controller,
       decoration: InputDecoration(
         labelText: labelText,
