@@ -105,6 +105,7 @@ Widget _buildTextFormField(_controller, String labelText) {
         if (value == null || value.isEmpty) {
           return 'Enter validate input';
         }
+        return null;
       },
       controller: _controller,
       decoration: InputDecoration(
